@@ -1,0 +1,10 @@
+import xml.etree.ElementTree as ET
+tree = ET.parse('m.xml')
+root = tree.getroot()
+
+'''print root[0][1].text'''
+ 
+
+
+for country in root.findall('items'):
+     print country.find('item').text
